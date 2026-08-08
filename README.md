@@ -17,7 +17,7 @@ Full methodology, experiments, and results are documented in `docs/report.pdf`
 
 ---
 
-##  Repository Structure
+## Repository Structure
 
 ```text
 uni-cytology-detect/
@@ -27,12 +27,13 @@ uni-cytology-detect/
 │
 └── notebooks/
     ├── cell_segmentation.ipynb    # Cell segmentation and preprocessing pipelines
-    ├── centernet_300.ipynb        # Baseline CenterNet architecture 
+    ├── centernet_300.ipynb        # Baseline CenterNet architecture
     ├── centernet_uni.ipynb        # CenterNet model adapted with UNI backbone
     ├── rcnn_300.ipynb             # Baseline R-CNN pipeline
     ├── uni_corner_net.ipynb       # CornerNet implementation utilizing UNI
     ├── uni_fcos.ipynb             # FCOS detector using UNI backbone
     └── uni_rcnn.ipynb             # Faster R-CNN pipeline powered by UNI
+```
 
 ## Models Implemented
 
@@ -42,6 +43,8 @@ uni-cytology-detect/
 | `uni_rcnn.ipynb` | Faster R-CNN + UNI ViT-Large | Anchor-based baseline comparison |
 | `uni_fcos.ipynb` | FCOS + UNI ViT-Large | Anchor-free comparison (centerness-based) |
 | `uni_corner_net.ipynb` | CornerNet + UNI ViT-Large + FPN | Anchor-free comparison (corner-pairing) |
+| `centernet_300.ipynb` | CenterNet + UNI ViT-Large | Dataset-partition ablation — COCO-style dataset |
+| `rcnn_300.ipynb` | Faster R-CNN + UNI ViT-Large | Dataset-partition ablation — COCO-style dataset |
 | `cell_segmentation.ipynb` | Multi-Otsu + watershed | Downstream N/C ratio & Paris System classification |
 
 All detectors share the same UNI ViT-Large backbone (DINOv2-pretrained on
@@ -97,4 +100,3 @@ architecture, full experimental results, and conclusions — is in:
 ```
 docs/report.pdf
 ```
-
