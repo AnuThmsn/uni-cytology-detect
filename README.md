@@ -15,18 +15,24 @@ Paris System for Reporting Urinary Cytology (NHGUC / AUC / SHGUC).
 Full methodology, experiments, and results are documented in `docs/report.pdf`
 (see the "Report" section below).
 
-## Repository Structure
+---
 
-```
-.
-├── docs/                  Project report (report.pdf)
-├── cell_segmentation.ipynb
-├── centernet_uni.ipynb
-├── uni_corner_net.ipynb
-├── uni_fcos.ipynb
-├── uni_rcnn.ipynb
-└── README.md
-```
+##  Repository Structure
+
+```text
+uni-cytology-detect/
+│
+├── docs/
+│   └── report.pdf             # Project report and technical documentation
+│
+└── notebooks/
+    ├── cell_segmentation.ipynb    # Cell segmentation and preprocessing pipelines
+    ├── centernet_300.ipynb        # Baseline CenterNet architecture 
+    ├── centernet_uni.ipynb        # CenterNet model adapted with UNI backbone
+    ├── rcnn_300.ipynb             # Baseline R-CNN pipeline
+    ├── uni_corner_net.ipynb       # CornerNet implementation utilizing UNI
+    ├── uni_fcos.ipynb             # FCOS detector using UNI backbone
+    └── uni_rcnn.ipynb             # Faster R-CNN pipeline powered by UNI
 
 ## Models Implemented
 
